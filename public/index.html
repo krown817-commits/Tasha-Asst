@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#070708" />
+  <title>Tasha Asst</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><div class="brand-mark">T</div><div><b>TASHA</b><span>ASST</span></div></div>
+      <div class="creator-credit">MADE BY <strong>DEVELOPER SHAZAM</strong><span>OWNER OF META TECH</span></div>
+      <button class="new-chat" id="newChat">＋ <span>New chat</span></button>
+      <div class="side-label">WORKSPACE</div>
+      <nav>
+        <button class="nav active" data-page="chat">⌁ <span>Chat</span></button>
+        <button class="nav" data-page="history">◷ <span>History</span></button>
+        <button class="nav" data-page="saved">☆ <span>Saved</span></button>
+      </nav>
+      <div class="side-label">ACCOUNT</div>
+      <nav>
+        <button class="nav" data-page="settings">⚙ <span>Settings</span></button>
+      </nav>
+      <div class="side-bottom">
+        <div class="status"><i></i><span>AI ONLINE</span></div>
+        <button class="profile" id="profileBtn"><div class="avatar">T</div><div class="profile-text"><b id="sideName">Guest</b><small id="sideEmail">Local account</small></div><span>⋯</span></button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu">☰</button>
+        <div class="crumb"><span id="pageTitle">Tasha Asst</span><em>·</em><span class="muted">AI workspace</span></div>
+        <div class="top-actions"><button class="icon-btn" id="themeBtn" title="Toggle appearance">☾</button><button class="avatar mini" id="topProfile">T</button></div>
+      </header>
+
+      <section id="chatPage" class="page chat-page">
+        <div class="chat-wrap">
+          <div class="hero" id="emptyState">
+            <div class="hero-logo">T</div>
+            <h1>How can I help you?</h1>
+            <p>Ask Tasha anything. Your AI workspace is ready.</p>
+            <div class="suggestions">
+              <button data-prompt="Explain quantum computing in simple terms.">Explain something <span>→</span></button>
+              <button data-prompt="Write a professional email for me.">Write for me <span>→</span></button>
+              <button data-prompt="Give me five creative business ideas.">Brainstorm ideas <span>→</span></button>
+              <button data-prompt="Help me debug a JavaScript problem.">Help with code <span>→</span></button>
+            </div>
+          </div>
+          <div class="messages" id="messages"></div>
+          <div class="composer-area">
+            <form class="composer" id="composer">
+              <textarea id="input" rows="1" placeholder="Message Tasha Asst..." autocomplete="off"></textarea>
+              <div class="composer-bottom"><span class="hint">Tasha can make mistakes. Check important information.</span><button class="send" id="sendBtn" type="submit">↑</button></div>
+            </form>
+            <div class="composer-links"><span>DeepSeek V3</span><span>•</span><span>Secure session</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="historyPage" class="page hidden"><div class="settings-card wide"><h2>History</h2><p class="sub">Your recent conversations are stored in this browser.</p><div id="historyList" class="history-list"></div></div></section>
+      <section id="savedPage" class="page hidden"><div class="settings-card wide"><h2>Saved</h2><p class="sub">Save useful answers from your chats.</p><div id="savedList" class="history-list empty-list">Nothing saved yet.</div></div></section>
+      <section id="settingsPage" class="page hidden settings-page">
+        <div class="settings-layout">
+          <div class="settings-menu"><button class="set-tab active">⚙ General</button><button class="set-tab">◐ Appearance</button><button class="set-tab">✦ AI Behavior</button><button class="set-tab">▣ Data Management</button><button class="set-tab">♧ Security & login</button></div>
+          <div class="settings-content"><h1>General</h1>
+            <div class="account-card"><div class="avatar large">T</div><div><b id="settingsName">Guest</b><small id="settingsEmail">Local account</small></div><button id="editProfile">Edit profile</button></div>
+            <div class="premium"><div class="spark">✦</div><div><b>Tasha Pro</b><span>Advanced workspace features — coming soon</span></div></div>
+          <div class="footer-credit">MADE BY <strong>DEVELOPER SHAZAM</strong><br><span>OWNER OF META TECH</span></div>
+            <div class="settings-card"><h3>Preferences</h3><label class="row"><span>Enter to send</span><input type="checkbox" id="enterSend" checked></label><label class="row"><span>Remember conversations</span><input type="checkbox" id="remember" checked></label><label class="row"><span>Dark appearance</span><input type="checkbox" id="darkMode" checked></label></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div class="modal hidden" id="profileModal"><div class="modal-card"><button class="close" id="closeModal">×</button><div class="modal-logo">T</div><h2>Your Tasha account</h2><p>Create a local profile for this browser.</p><input id="nameInput" placeholder="Full name"/><input id="emailInput" placeholder="Email address" type="email"/><button class="primary" id="saveProfile">Save profile →</button></div></div>
+  <script src="/app.js"></script>
+</body>
+  </html>
+                
